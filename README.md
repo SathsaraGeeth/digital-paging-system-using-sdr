@@ -1,12 +1,22 @@
 # Digital-Paging-System-Using-SDR
 
-Here we implement a two-way digital messaging system using Software Defined Radios (SDRs).  
-The system allows short text messages to be sent and received between devices with proper addressing, acknowledgment, and error detection mechanisms.
+Two-way digital messaging system using Software Defined Radios (SDRs) for **EN2130 Communication Design Project**.  
+Supports reliable text messaging with addressing, acknowledgments, and error detection.
+
+---
 
 ## Features
-- Reliable message delivery using digital modulation QPSK.
-- Unique addressing for each receiver and transmitter.
-- CRC-based error detection to discard corrupted messages.
-- Stop and wait ARQ scheme for error correction.
-- Basic user interface to compose and send messages.
-- AES128 encryption, priority-based message handling.
+- **Reliable messaging:** QPSK digital modulation  
+- **Unique addressing** for each device  
+- **Error detection:** CRC-based  
+- **Error correction:** Stop-and-wait ARQ  
+- **User interface:** Compose and send messages  
+- **Security & priority:** AES128 encryption and priority-based handling  
+
+---
+
+## Implementation
+- Written in **Python**
+- Uses **deque** for queues, **threading** for ARQ state machine  
+- Includes **AES encryption**, **CRC32 error detection**, and **ALOHA MAC**
+- Testable between SDR devices (or simulation environment)
